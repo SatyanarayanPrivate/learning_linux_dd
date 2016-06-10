@@ -1,0 +1,344 @@
+http://www.sanfoundry.com/linux-san-courses-3months/
+
+>> http://www.sanfoundry.com/linux-kernel-internals-training/
+    > Linux Kernel Introduction 
+        Linux System
+        Linux Organization
+        Linux Version
+        Basic OS Concept
+        Linux N+1 System
+        Linux Filesystem
+        File Types
+        Processes & File Objects
+        File Object Access
+        The Process/Kernel Model
+        Re-entrant Kernel
+        Interleaved Kernel Control Paths
+        Preemptive Kernel
+        Preemptive Context Switch
+        Synchronization
+        Deadlock
+        Memory Management
+
+    > Getting Started with Kernel
+        Obtaining the Kernel Source
+        Installing the Kernel Source
+        Using Patches
+        The Kernel Source Tree
+        Building the Kernel
+        Configuring the Kernel
+        Efficient Kernel Building
+        Spawning Multiple Build Jobs
+        Installing the New Kernel
+        Understanding Kernel Programming
+        C Library or Standard Headers?
+        GNU C Extensions
+        Inline Functions
+        Inline Assembly
+        Branch Annotation
+        Memory Protection?
+        Floating Point?
+        Stack Sizes
+
+    > Memory Addressing
+        Logical, Linear & Physical Addresses
+        Translating a Logical Address
+        Segmentation in Linux
+        Paging in Linux
+        Large Pages
+        Physical Page Extension(PAE)
+        Hardware Cache
+        Cache Coherency
+        Translation Lookaside Buffers (TLBs)
+        Linux 4 Table Paging Model
+        Physical Memory Layout
+        Kernel Physical Memory Variables
+        Process Page Tables
+        Kernel Page Tables
+        TLB Management
+
+    > Processes in Linux Kernel
+        Process
+        Lightweight Process
+        Threads & Thread Groups
+        Process Descriptions
+        The task_struct
+        Linux Process States
+        Thread Group Leader
+        thread_info Structure
+        Kernel Stack Structure
+        The Process List
+        Waiting Processes
+        Wait Queues
+        Awakening Processes
+        Process Creation
+        clone() / fork() / vfork()
+        Kernel Threads
+        Process 0 & Process 1
+        Destroying Processes
+        exit_group() / _exit()
+        Process Removal
+
+    > Kernel Synchronization
+        Kernel Preemption
+        When Synchronization is Necessary
+        Interleaved Kernel Control Paths
+        When Synchronization is Not Necessary
+        Synchronization Constraints
+        Synchronization Primitives
+        Per-CPU Variables
+        Atomic Operations
+        Optimization & Memory Barriers
+        Spin Locks
+        Read/Write Spin Locks
+        Seqlocks
+        Read-Copy Update (RCU) Locks
+        Semaphores
+        Read/Write Semaphores
+        Local Interrupt Disabling
+        Disabling Deferrable Functions
+
+    > Timing Measurements in Linux
+        Clocks and Timer Circuits
+        Linux Timekeeping Architecture
+        The jiffies Variable
+        Updating System Statistics
+        Software Timers
+        Dynamic Timer List Structure
+        Timer List Data-Structure
+        Per-CPU Timer List
+        Delay Functions
+        udelay() and ndelay()
+        System Calls for POSIX Timers and Clocks
+
+    > Process Scheduling
+        Process Preemption
+        Quantum Duration
+        Scheduling Policies
+        Scheduling of Conventional Processes
+        Dynamic Priority
+        Realtime Processes
+        Realtime Process Scheduling
+        Runqueue Data Structure
+        Runqueue Balancing in Multiprocessing Systems
+        Scheduling Domains
+        Load Balancing
+        CPU Binding 	
+
+    > Memory Management
+        Page Frame / Page
+        Memory Zones
+        Reserved Page Frames
+        High Memory Page Frames
+        Temporary Kernel Mappings
+        Dynamic Contigous Page Allocation
+        Slab Allocator
+        Object Caches
+        Slab Cache Allocation
+        Object Allocation
+        General Purpose Allocation – kmalloc()
+        Non-contigous Memory Area Management
+
+    > Process Address Space
+        Kernel Address Space
+        Process Address Space
+        System Calls for Memory Region
+        brk(), execve(), _exit(), fork()
+        mmap(), mmap2(), munmap(),
+        shmat(), shmdt()
+        Page Faults
+        Valid & Invalid Addresses
+        The Memory Descriptor
+        The mem_struct Structure
+        Memory Regions
+        Linear Address Intervals – do_mmap()
+        Page Fault Exception Handling
+        Demand Paging
+        Copy on Write (COW)
+        Creating Process Address Space
+        Managing Heap Space 	
+
+    > System Calls
+        System Call Handler
+        Service Routines
+        Invoking a System Call
+        Leaving a System Call
+        Arguments to System Call
+        Arguments in Registers
+        Verifying the Arguments
+        Accessing Process Address Space
+        Exception Tables
+        Fixing Address Exceptions
+        Kernel Wrapper Routines
+
+    > Signals in Linux
+        Signal Related System Calls
+        Signal Generation and Delivery
+        Pending Signals
+        Action Performed Upon Delivery
+        Signals @ Multithreaded Application
+        Data Structures for Signal Handling
+        Delivering the Signal
+        Catching the Signal
+        Restarting System Calls 
+
+    > Linux Page Cache
+        Page Cache Contents
+        Page Cache Requirements
+        The address_space Object
+        Block Buffers and Page Cache
+        The Buffer Head
+        Buffer Pages
+        Writing Dirty Pages to Disk
+        bdflush & pdflush
+        sync(), fsync() and fdatasync() calls
+
+    > Page Frame Reclamation
+        Page Frame Reclaiming Algorithm
+        Unreclaimable pages
+        Swappable Pages
+        Syncable Pages
+        Discardable Pages
+        Design of the Algorithm
+        Reclaimation Tigger Points
+        Low on Memory
+        Periodic Reclaiming
+        The Out-of-memory Killer
+        Swapping Features 	
+
+    > Linux Virtual Filesystem
+        VFS Role in File Operations
+        VFS Supported Filesystem Classes
+        Common File Model
+        Process & VFS Object Interaction
+        VFS Data Structures
+        Super Block Object
+        Inode Object
+        File Object
+        Dentry Object
+        Processes and Files
+        The fd array
+        Constraints on a Process
+        File System Types
+        Filesystem Type Registration
+        Filesystem Handling
+        Mounting a Filesystem
+        Pathname Lookup
+        Reads & Writes
+        Other File Operations 
+        
+>> http://www.sanfoundry.com/training-on-linux-device-drivers/
+    
+Labs-Assignments
+Lab1 – Identification of major and minor numbers for various popular (reserved) devices.
+Lab2 – Writing simple kernel module with command line arguments.
+Lab3 – Identification of currently allocated IO-ports, IO-memory & IRQs on your system/laptop.
+Lab4 – Writing a memory based character device driver (DLKM Kernel Module) of fixed size (/dev/sanfd0).
+Lab5 – Writing an advanced memory based character device driver of dynamic size (/dev/sanfd_dynamic).
+Lab6 – Writing /dev/sanfd_zero device driver (reading any sized data from this device returns zero-filled data).
+Lab7 – Writing /dev/sanfd_null device driver (ala bit-bucket / black-hole driver).
+Lab8 – Implementation of ioctls – RESET (it should reset the device to its default size and initial values), GETSIZE (should return the current size of the device), 
+EXPAND X (will expand the size of /dev/sanfd_dynamic device by X bytes).
+Lab9 – Writing a userspace program to get the device size.
+Lab10 – Writing a userspace program to expand the dynamic device size by 1MB and verify the working of the driver.
+Lab11 – Writing user-space code to parallelly generate load on the devices, generate race conditions and implement locks in the driver to fix all the issues.
+
+Test the working of all the devices of the driver as follows.
+
+/dev/sanfd0
+1a. echo “welcome to sanfoundry’s device driver class” > /dev/sanfd0
+1b. Verify the output by issuing “cat /dev/sanfd0”
+2a. dd if=/dev/sanfd0 of=mydata count=1 bs=512
+– verify the output & size of mydata
+2b. dd if=/dev/sanfd0 of=mydata count=1 bs=1M
+– verify the output & size of mydata file
+2c. dd if=/dev/sanfd0 of=mydata
+– verify the output & size of mydata file
+3a. dd if=/dev/zero of=/dev/sanfd0 count=1 bs=512
+– verify the behavior of the driver
+3b. dd if=/dev/zero of=/dev/sanfd0 count=1 bs=1M
+– verify the behavior of the driver
+3c. dd if=/dev/zero of=/dev/sanfd0
+– verify the behavior of the driver
+
+/dev/sanfd_dynamic
+1. echo “welcome to sanfoundry’s device driver class” > /dev/sanfd_dynamic
+
+2a. dd if=/dev/sanfd_dynamic of=mydata count=1 bs=512
+– verify the output & size of mydata
+2b. dd if=/dev/sanfd_dynamic of=mydata count=1 bs=1M
+– verify the output & size of mydata file
+2c. dd if=/dev/sanfd_dynamic of=/dev/null
+– Observe the behavior of the system
+3a. dd if=/dev/zero of=/dev/sanfd_dynamic count=1 bs=512
+– verify the behavior of the driver
+3b. dd if=/dev/zero of=/dev/sanfd_dynamic count=1 bs=1M
+– verify the behavior of the driver
+3c. dd if=/dev/zero of=/dev/sanfd_dynamic
+– verify the behavior of the system
+
+/dev/sanfd_zero
+1. dd if=/dev/sanfd_zero of=zerodata count=1 bs=512
+– verify the output & size of zerodata file
+2. dd if=zerodata of=/dev/sanfd_zero count=1 bs=512
+– verify the behaviour
+    
+    What is Kernel
+    Linux System Architecture
+    Linux Software Architecture
+    Basic Kernel Services
+    Linux Kernel Code
+    What is a Device Driver
+    Classes of Devices
+    Device Driver Classification
+    Concept of a Module
+    Fundamental Concepts
+    Kernel Module Vs Application
+    Namespace
+    Major & Minor Numbers
+    Reserved Major Numbers
+    Module Parameters
+    Loading/Unloading Modules
+    Current Process Information
+    Kernel Memory Allocations
+    Driver Entry Points
+    Driver Switch Tables
+    Module Init & Exit
+    Device Registration
+    Character Device Drivers
+    File Structure
+    File Operations Structure
+    Driver-User Data Transfer
+    Driver-Kernel Communication
+    Driver-Device Communication
+    Device File Creation
+    Device File Control Operations
+
+    Ioctl command numbers
+    Capabilities & Restricted Operations
+    Driver Usage Count
+    Kernel Synchronization Mechanisms
+    Introduction to Race Conditions
+    Sources of Race Conditions
+    Preemption – User & Kernel
+    Preemption APIs
+    Interrupt Handling APIs
+    Semaphores
+    Binary & Counting Semaphores
+    Reader Writer Semaphores
+    Semaphore APIs
+    Mutexes
+    Spinlocks
+    Spinlock APIs
+    Atomic Operations
+    Seqlocks
+    Seqlock APIs
+    Completions
+    Deadlock – Sources
+    Deadlock Prevention
+    Waitqueues
+    Rules for Sleeping
+    Waitqueue APIs
+    Linux Kernel Tree
+    Linux Source Code
+    Linux Kernel Configuration
